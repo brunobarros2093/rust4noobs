@@ -1,18 +1,8 @@
-use std::io;
-
 fn main() {
-    // mutable ------------- cria uma string
-    let mut input = String::new();
-    println!("added something: ");
-
-    // pattern matching
-    match io::stdin().read_line(&mut input) {
-        // a linha do "match" pode retornar um OK ou um Error
-        Ok(_) => {
-            println!("said: {}", input);
-        },
-        Err(e) => {
-            println!("error {}", e);
-        }
-    }
+    // o ! significa que a func println é um MACRO
+    println!("printando");
+    println!("a + b = {}", 3 + 9);
+    // posições
+    println!("{0} has index 0 - {2} and {1}", "pos0", "pos1", "pos2");
+    println!("binario {:b}, Hex: {:x}, octal: {:o}", 5, 15, 55);
 }
