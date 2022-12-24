@@ -3,13 +3,16 @@ fn main() {
 
     let mut name = "John";
     // passando por referencia o end mutavel da variavel 'name'
-    say_hello(&mut name);
-    println!("{}", name);
+   
+    println!("{}", say_hello(&mut name));
 
 }
 
-fn say_hello(name:&mut &str) {
+// --------------------------retorno esperado 
+fn say_hello(name:&mut &str) -> String{
     // deferencia a variavel name 
-    *name = "Alex";
-    println!("Hello {}",name);
+    // println!("Hello {}",name);
+    // *name = "Alex";
+    let hola = format!("Hola {}", name);
+    return hola; 
 }
